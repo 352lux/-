@@ -1,0 +1,10 @@
+#!name=Douyin & TikTok 去水印
+#!desc=去除抖音 & TikTok 视频水印，自动替换无水印播放地址
+#!author=352lux & ChatGPT
+#!system=ios
+
+[Script]
+http-request ^https?:\/\/.*\/aweme\/v\d\/play\/ script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js, requires-body=true, tag=Douyin-TikTok-NoWatermark
+
+[MITM]
+hostname = *.amemv.com, *.snssdk.com, *.tiktokv.com, *.musical.ly
